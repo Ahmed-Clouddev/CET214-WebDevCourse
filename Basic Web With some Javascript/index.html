@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="master.css">
+        <title>My WebAPP</title>
+        <meta name="description" content="Simple coursework page demonstrating HTML, CSS and light JS interactions">
+    </head>
+
+    <body>
+        <header>
+            <h1>This is My <b>WebAPP</b> &copy;</h1>
+            <h2>Enjoy having a <i>look</i>!</h2>
+        </header>
+
+        <main>
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit tempore consequatur qui numquam
+                    voluptatem, sint quo odit ad aliquam soluta iusto reiciendis doloremque.</p>
+            </section>
+
+            <hr>
+
+            <section>
+                <h3>Cheack out this Image</h3>
+                <figure>
+                    <img src="https://picsum.photos/600/240" alt="Random placeholder image">
+                    <figcaption>Sample image from picsum.photos</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h3>Top 3 skills</h3>
+                <p>I will show you order of my top 3 skills</p>
+                <ol>
+                    <li>Cloud
+                        <ul>
+                            <li>AWS</li>
+                            <li>Azure</li>
+                            <li>GCP</li>
+                        </ul>
+                    </li>
+                    <li>Networking</li>
+                    <li>IaC</li>
+                </ol>
+            </section>
+
+            <hr>
+
+            <section>
+                <h3>Contact & Links</h3>
+                <p><s>check out</s> LET'S CONNECT: <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                    | <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+            </section>
+
+            <section>
+                <h3>Terms To Know</h3>
+                <dl>
+                    <dt>AWS</dt>
+                    <dd>Amazon Web Services</dd>
+                    <dt>Azure</dt>
+                    <dd>Microsoft Cloud</dd>
+                </dl>
+            </section>
+
+            <hr>
+
+            <section>
+                <p>Love Science? Then you know what H <sub>2</sub>O is and that x <sup>3</sup> can grow quickly.</p>
+                <pre><code>Print("HTML!!")</code></pre>
+            </section>
+
+            <hr>
+
+            <section>
+                <h3>Items</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Q</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>koko</td>
+                            <td>250</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>koko</td>
+                            <td>250</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>koko</td>
+                            <td>250</td>
+                            <td>13</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td>750</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <section>
+                <h3>Sign In</h3>
+                <form method="POST" action="submit.php">
+                    <label for="User">NAME</label>
+                    <input type="text" placeholder="Enter Your Username" id="User" name="User">
+
+                    <label for="pass">Password</label>
+                    <input type="password" name="Pass" id="pass" placeholder="Enter your password" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email">
+
+                    <div class="form-actions">
+                        <button id="tt" type="button">hello</button>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </section>
+
+            <hr>
+
+            <section class="interactive">
+                <p id="koko">JS TEST</p>
+                <p class="toto">ts test 2</p>
+                <div class="interactive-controls">
+                    <button id="changeTextBtn" type="button">Change JS Text</button>
+                    <button id="toggleTheme" type="button">Toggle Theme</button>
+                </div>
+            </section>
+
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+
+    </html>

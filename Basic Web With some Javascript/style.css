@@ -1,0 +1,405 @@
+/* Modernized and enhanced styles for Task Manager Dashboard */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f5f5f5 0%, #e3e6f3 100%);
+    transition: background 0.4s, color 0.3s;
+}
+
+body.light {
+    background: linear-gradient(120deg, #f5f5f5 0%, #e3e6f3 100%);
+    color: #222;
+}
+
+body.dark {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    color: #f5f5f5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    padding: 24px 18px 40px 18px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60, 60, 90, 0.12);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(2px);
+    transition: background 0.4s;
+}
+
+body.dark .container {
+    background: rgba(34, 34, 40, 0.92);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    border-bottom: 1.5px solid #e0e0e0;
+    padding-bottom: 18px;
+}
+
+
+
+.dashboard-header h1 {
+    font-size: 2.1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    background: #333;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    transition: background 0.3s, color 0.3s;
+}
+
+.light .theme-toggle {
+    background: #333;
+    color: #fff;
+}
+
+.dark .theme-toggle {
+    background: #fff;
+    color: #232526;
+}
+
+/* Task Form Card */
+.task-form-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 28px 24px 18px 24px;
+    margin-bottom: 28px;
+    transition: background 0.4s;
+}
+
+body.dark .task-form-card {
+    background: rgba(44, 44, 54, 0.98);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.form-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #007bff;
+}
+
+.modern-form .form-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 14px;
+}
+
+.modern-form .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+body.dark .modern-form label {
+    color: #e0e0e0;
+}
+
+.modern-form input,
+.modern-form textarea,
+.modern-form select {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1.5px solid #cfd8dc;
+    font-size: 1em;
+    background: #f8fafd;
+    color: #232526;
+    margin-bottom: 0;
+    transition: border 0.2s, background 0.3s;
+}
+
+body.dark .modern-form input,
+body.dark .modern-form textarea,
+body.dark .modern-form select {
+    background: #232526;
+    color: #f5f5f5;
+    border-color: #444;
+}
+
+.modern-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* Filter Section Card */
+.filter-section-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.4s;
+}
+
+body.dark .filter-section-card {
+    background: rgba(44, 44, 54, 0.98);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.13);
+}
+
+.filter-section-card label {
+    font-weight: 500;
+    color: #555;
+}
+
+body.dark .filter-section-card label {
+    color: #e0e0e0;
+}
+
+.filter-section-card select {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1.5px solid #cfd8dc;
+    background: #f8fafd;
+    color: #232526;
+    font-size: 1em;
+    transition: border 0.2s, background 0.3s;
+}
+
+body.dark .filter-section-card select {
+    background: #232526;
+    color: #f5f5f5;
+    border-color: #444;
+}
+
+/* Tasks List Modern */
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-height: 120px;
+}
+
+.task-item {
+    padding: 20px 22px 16px 22px;
+    border-radius: 12px;
+    border-left: 6px solid;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    transition: background 0.4s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark .task-item {
+    background: rgba(44, 44, 54, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+.task-item.high {
+    border-left-color: #dc3545;
+}
+
+.task-item.medium {
+    border-left-color: #ffc107;
+}
+
+.task-item.low {
+    border-left-color: #28a745;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.task-title {
+    font-size: 1.18em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.task-priority {
+    padding: 4px 14px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.priority-high {
+    background: linear-gradient(90deg, #dc3545 60%, #ff6f61 100%);
+    color: #fff;
+}
+
+.priority-medium {
+    background: linear-gradient(90deg, #ffc107 60%, #ffe082 100%);
+    color: #333;
+}
+
+.priority-low {
+    background: linear-gradient(90deg, #28a745 60%, #7be495 100%);
+    color: #fff;
+}
+
+.task-description {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #444;
+}
+
+body.dark .task-description {
+    color: #e0e0e0;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    margin-right: 0;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3 60%, #007bff 100%);
+}
+
+.btn-edit {
+    background: linear-gradient(90deg, #17a2b8 60%, #5ee7df 100%);
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: linear-gradient(90deg, #138496 60%, #17a2b8 100%);
+}
+
+.btn-delete {
+    background: linear-gradient(90deg, #dc3545 60%, #ff6f61 100%);
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: linear-gradient(90deg, #a71d2a 60%, #dc3545 100%);
+}
+
+.btn-save {
+    background: linear-gradient(90deg, #28a745 60%, #7be495 100%);
+    color: #fff;
+}
+
+.btn-save:hover {
+    background: linear-gradient(90deg, #218838 60%, #28a745 100%);
+}
+
+.btn-cancel {
+    background: linear-gradient(90deg, #6c757d 60%, #b0b3b8 100%);
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(90deg, #343a40 60%, #6c757d 100%);
+}
+
+.edit-mode input,
+.edit-mode textarea,
+.edit-mode select {
+    margin-bottom: 7px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1.5px solid #cfd8dc;
+    font-size: 1em;
+    background: #f8fafd;
+    color: #232526;
+    transition: border 0.2s, background 0.3s;
+}
+
+body.dark .edit-mode input,
+body.dark .edit-mode textarea,
+body.dark .edit-mode select {
+    background: #232526;
+    color: #f5f5f5;
+    border-color: #444;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 48px 0;
+    opacity: 0.7;
+    font-size: 1.15em;
+    color: #888;
+}
+
+body.dark .empty-state {
+    color: #bbb;
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 8px 2vw 24px 2vw;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 10px;
+    }
+
+    .task-form-card,
+    .filter-section-card {
+        padding: 14px 8px;
+    }
+
+    .modern-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .task-item {
+        padding: 12px 8px 10px 12px;
+    }
+}
